@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
+import MassageList from './shared/components/Masseges'
+import { massages } from './fixtures'
+import BlogContainer from './shared/components/BlogComponents'
+import { ReactLabs_25_04_2025 } from './fixtures'
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  <>
+  <MassageList massages={massages} />
+  <BlogContainer blog={ReactLabs_25_04_2025} />
+  </>
+  
 )
